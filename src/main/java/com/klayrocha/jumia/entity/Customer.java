@@ -11,6 +11,13 @@ import javax.persistence.Transient;
 
 import com.klayrocha.jumia.helper.Helper;
 
+/**
+ * Class representing the model of an customer
+ * 
+ * @author Francis Klay Rocha
+ *
+ */
+
 @Entity
 @Table(name = "customer")
 public class Customer implements Serializable {

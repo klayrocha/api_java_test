@@ -1,20 +1,26 @@
 package com.klayrocha.jumia.entity;
 
+/**
+ * Class representing the model of an country
+ * 
+ * @author Francis Klay Rocha
+ *
+ */
 public class Country {
 
-	private Integer code;
+	private String code;
 	private String name;
 
-	public Country(Integer code, String name) {
+	public Country(String code, String name) {
 		this.code = code;
 		this.name = name;
 	}
 
-	public Integer getCode() {
+	public String getCode() {
 		return code;
 	}
 
-	public void setCode(Integer code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 

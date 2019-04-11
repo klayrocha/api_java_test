@@ -16,6 +16,13 @@ import com.klayrocha.jumia.entity.Customer;
 import com.klayrocha.jumia.response.Response;
 import com.klayrocha.jumia.service.CustomerService;
 
+/**
+ * Class RESTful for PhoneController
+ * 
+ * @author Francis Klay Rocha
+ *
+ */
+
 @RestController
 @RequestMapping("/api/phone")
 @CrossOrigin(origins = "*")
@@ -33,10 +40,10 @@ public class PhoneController {
 	}
 
 	@GetMapping(value = "{page}/{count}/{countryCode}/{state}")
-	public ResponseEntity<Response<Page<Customer>>> findByCountry(@PathVariable int page, @PathVariable int count,
+	public ResponseEntity<Response<Page<Customer>>> findByCountryState(@PathVariable int page, @PathVariable int count,
 			@PathVariable String countryCode, @PathVariable String state) {
 		Response<Page<Customer>> response = new Response<Page<Customer>>();
-		Page<Customer> customers = customerService.findByCountry(page, count, countryCode, state);
+		Page<Customer> customers = customerService.findByCountryState(page, count, countryCode, state);
 		response.setData(customers);
 		return ResponseEntity.ok(response);
 	}

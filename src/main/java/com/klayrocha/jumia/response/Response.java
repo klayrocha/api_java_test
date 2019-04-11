@@ -3,6 +3,13 @@ package com.klayrocha.jumia.response;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class used in return on services
+ * 
+ * @author Francis Klay Rocha
+ *
+ * @param <T>
+ */
 public class Response<T> {
 
 	private T data;

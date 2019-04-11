@@ -8,8 +8,16 @@ import org.hibernate.dialect.function.StandardSQLFunction;
 import org.hibernate.dialect.function.VarArgsSQLFunction;
 import org.hibernate.type.StringType;
 
+/**
+ * SQLite Dialect configuration class, to register the data types 
+ * @author Francis Klay Rocha
+ *
+ */
 public class SQLiteDialect extends Dialect {
 
+	/**
+	 * Register the data types 
+	 */
 	public SQLiteDialect() {
 		registerColumnType(Types.BIT, "integer");
 		registerColumnType(Types.TINYINT, "tinyint");
