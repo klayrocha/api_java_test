@@ -14,5 +14,4 @@ public class JumiaPhoneApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
 }

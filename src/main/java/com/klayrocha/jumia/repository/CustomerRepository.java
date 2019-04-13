@@ -23,4 +23,7 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
 	@Query(value = "SELECT c FROM Customer c order by substr(c.phone,2,3)")
 	Page<Customer> findAllOrderByCountry(Pageable pages);
+
+	@Query(value = "SELECT COUNT(c), c.phone FROM Customer c GROUP by substr(c.phone,2,3)")
+	Object[] findChart();
 }

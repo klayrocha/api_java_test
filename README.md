@@ -20,3 +20,5 @@ http://localhost:8080/api/phone/0/41/212/Valid
 # FindCountries
 http://localhost:8080/api/phone/countries
 
+#Chart
+http://localhost:8080/api/phone/chart

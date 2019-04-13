@@ -68,9 +68,14 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public List<Country> findCountries() {
-		List<Country> countries = Arrays.asList(new Country("237", "Cameroon"), new Country("251", "Ethiopia"),
-				new Country("212", "Morocco"), new Country("258", "Mozambique"), new Country("256", "Uganda"));
+		List<Country> countries = Arrays.asList(new Country(237, "Cameroon"), new Country(251, "Ethiopia"),
+				new Country(212, "Morocco"), new Country(258, "Mozambique"), new Country(256, "Uganda"));
 		return countries;
+	}
+
+	@Override
+	public Object[] findChart() {
+		return this.customerRepository.findChart();
 	}
 
 }

@@ -22,4 +22,6 @@ public interface CustomerService {
 	Page<Customer> findByCountryState(int page, int count, String country, String state);
 
 	List<Country> findCountries();
+
+	Object[] findChart();
 }

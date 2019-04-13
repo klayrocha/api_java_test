@@ -3,23 +3,22 @@ package com.klayrocha.jumia.service;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.rules.ExpectedException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
 
+import com.klayrocha.jumia.JumiaPhoneApplicationTests;
 import com.klayrocha.jumia.entity.Customer;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@ActiveProfiles("test")
-public class CustomerServiceTest {
+public class CustomerServiceTest extends JumiaPhoneApplicationTests {
 
 	@Autowired
 	CustomerService customerService = null;
+
+	@Rule
+	public ExpectedException exception = ExpectedException.none();
 
 	@Test
 	public void testCountries() {
@@ -43,11 +42,17 @@ public class CustomerServiceTest {
 		Page<Customer> customers = customerService.findByCountryState(0, 41, "251", "Valid");
 		assertEquals(7, customers.getTotalElements());
 	}
-	
+
 	@Test
 	public void findByCountryStateCode251Uninformed() {
 		Page<Customer> customers = customerService.findByCountryState(0, 41, "251", "uninformed");
 		assertEquals(9, customers.getTotalElements());
+	}
+
+	@Test
+	public void findChart() {
+		Object[] charts = customerService.findChart();
+		assertNotNull(charts);
 	}
 
 }

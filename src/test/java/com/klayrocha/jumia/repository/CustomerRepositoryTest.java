@@ -1,23 +1,18 @@
 package com.klayrocha.jumia.repository;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
 
+import com.klayrocha.jumia.JumiaPhoneApplicationTests;
 import com.klayrocha.jumia.entity.Customer;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@ActiveProfiles("test")
-public class CustomerRepositoryTest {
+public class CustomerRepositoryTest extends JumiaPhoneApplicationTests {
 
 	@Autowired
 	CustomerRepository customerRepository;
@@ -34,6 +29,12 @@ public class CustomerRepositoryTest {
 		Pageable pages = PageRequest.of(0, 41);
 		Page<Customer> customers = customerRepository.findAllOrderByCountry(pages);
 		assertEquals(41, customers.getTotalElements());
+	}
+
+	@Test
+	public void findChart() {
+		Object[] charts = customerRepository.findChart();
+		assertNotNull(charts);
 	}
 
 }

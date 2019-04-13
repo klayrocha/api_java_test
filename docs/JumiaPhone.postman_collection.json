@@ -8,7 +8,8 @@
 	"order": [
 		"96f19171-f9bd-4337-a690-ed024aa75886",
 		"4c7b0001-4e45-4364-947c-e7c2fd3a5667",
-		"a7daf1d4-7b92-4f55-9268-fbe46e038252"
+		"a7daf1d4-7b92-4f55-9268-fbe46e038252",
+		"7b179aee-e788-45cc-a92a-048f1df23f5c"
 	],
 	"folders_order": [],
 	"folders": [],
@@ -16,7 +17,7 @@
 		{
 			"id": "4c7b0001-4e45-4364-947c-e7c2fd3a5667",
 			"name": "FindByCountryState",
-			"url": "http://localhost:8080/api/phone/0/41/uninformed/uninformed",
+			"url": "http://localhost:8080/api/phone/0/41/212/Valid",
 			"description": null,
 			"data": [],
 			"dataMode": "params",
@@ -26,6 +27,23 @@
 			"queryParams": [],
 			"auth": null,
 			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "7b179aee-e788-45cc-a92a-048f1df23f5c",
+			"name": "Chart",
+			"url": "http://localhost:8080/api/phone/chart",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
 			"folder": null,
 			"headers": "",
 			"pathVariables": {}
