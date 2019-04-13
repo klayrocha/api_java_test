@@ -11,54 +11,23 @@ import java.io.Serializable;
 public class Chart implements Serializable {
 
 	private static final long serialVersionUID = 5691998636175999750L;
-	private Long phoneQuantity;
-	private String countryName;
+	private Long value;
+	private String label;
 
-	public Long getPhoneQuantity() {
-		return phoneQuantity;
+	public Long getValue() {
+		return value;
 	}
 
-	public void setPhoneQuantity(Long phoneQuantity) {
-		this.phoneQuantity = phoneQuantity;
+	public void setValue(Long value) {
+		this.value = value;
 	}
 
-	public String getCountryName() {
-		return countryName;
+	public String getLabel() {
+		return label;
 	}
 
-	public void setCountryName(String countryName) {
-		this.countryName = countryName;
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((countryName == null) ? 0 : countryName.hashCode());
-		result = prime * result + ((phoneQuantity == null) ? 0 : phoneQuantity.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Chart other = (Chart) obj;
-		if (countryName == null) {
-			if (other.countryName != null)
-				return false;
-		} else if (!countryName.equals(other.countryName))
-			return false;
-		if (phoneQuantity == null) {
-			if (other.phoneQuantity != null)
-				return false;
-		} else if (!phoneQuantity.equals(other.phoneQuantity))
-			return false;
-		return true;
+	public void setLabel(String label) {
+		this.label = label;
 	}
 
 }

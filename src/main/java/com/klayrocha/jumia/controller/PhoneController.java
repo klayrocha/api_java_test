@@ -68,8 +68,8 @@ public class PhoneController {
 		for (int i = 0; i < list.length; i++) {
 			Object[] obj = (Object[]) list[i];
 			Chart chart = new Chart();
-			chart.setPhoneQuantity((Long)obj[0]);
-			chart.setCountryName(Helper.getCountryName((String)obj[1]));
+			chart.setValue((Long)obj[0]);
+			chart.setLabel(Helper.getCountryName((String)obj[1]));
 			listChart.add(chart);
 		}
 		response.setData(listChart);
