@@ -3,9 +3,7 @@ package com.klayrocha.jumia.service;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 
@@ -16,9 +14,6 @@ public class CustomerServiceTest extends JumiaPhoneApplicationTests {
 
 	@Autowired
 	CustomerService customerService = null;
-
-	@Rule
-	public ExpectedException exception = ExpectedException.none();
 
 	@Test
 	public void testCountries() {
